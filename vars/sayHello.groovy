@@ -1,3 +1,3 @@
-def call (String name = 'ali', String msg = 'hello') {
-    echo "${msg}, ${name}."
+def call (Map parameters = [:]) {
+    echo "${parameters.msg}, ${parameters.name}."
 }
