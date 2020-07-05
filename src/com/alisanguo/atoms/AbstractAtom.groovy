@@ -7,9 +7,12 @@ class AbstractAtom implements Serializable {
     AbstractAtom(steps) {
         this.steps = steps
         steps.properties.each { key, value ->
-            if (this.hasProperty(key) && !(key in ['class', 'metaClass']))
+            println(key)
+            if (this.hasProperty(key) && !(key in ['class', 'metaClass'])) {
                 this[key] = value
+            }
         }
+        this.echo = steps.echo
     }
 
     def execute() {
