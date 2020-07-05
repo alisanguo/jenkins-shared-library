@@ -7,11 +7,12 @@ class AbstractAtom implements Serializable {
     AbstractAtom(steps) {
         this.steps = steps
         steps.echo("init abstract atom")
-        this.echo = steps.echo
 
+    }
 
-
-
+    def methodMissing(String name, def args) {
+        System.out.println("methodMissing")
+        steps[name](args)
     }
 
     def execute() {
