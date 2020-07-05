@@ -6,18 +6,16 @@ class AbstractAtom implements Serializable {
 
     AbstractAtom(steps) {
         this.steps = steps
-        copyProperties(steps, this)
+        steps.properties.each { key, value ->
+            if (this.hasProperty(key) && !(key in ['class', 'metaClass']))
+                this[key] = value
+        }
     }
 
     def execute() {
 
     }
 
-    static def copyProperties(source, target) {
-        source.properties.each { key, value ->
-            if (target.hasProperty(key) && !(key in ['class', 'metaClass']))
-                target[key] = value
-        }
-    }
+
 
 }
