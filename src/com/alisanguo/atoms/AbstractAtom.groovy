@@ -6,12 +6,12 @@ class AbstractAtom implements Serializable {
 
     AbstractAtom(steps) {
         this.steps = steps
-        println("init abstract atom")
+        steps.echo("init abstract atom")
 
         def emc = new ExpandoMetaClass( AbstractAtom.class, false )
 
         steps.properties.each { key, value ->
-            println("****" + key)
+            steps.echo("****${key}")
             if (emc.hasProperty(key) && !(key in ['class', 'metaClass']))
                 emc[key] = value
         }
