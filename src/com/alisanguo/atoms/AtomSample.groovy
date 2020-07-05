@@ -13,7 +13,7 @@ class AtomSample extends AbstractAtom implements Serializable{
     }
 
     def methodMissing(String name, def args) {
-        steps.echo("atom methodMissing ${name}")
-        steps.name(args)
+        steps.echo("atom methodMissing ${name} ${args}")
+        steps."${name}"(args)
     }
 }
