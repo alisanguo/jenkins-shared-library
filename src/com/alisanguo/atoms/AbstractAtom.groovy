@@ -11,7 +11,7 @@ class AbstractAtom implements Serializable {
     }
 
     def methodMissing(String name, def args) {
-        System.out.println("methodMissing")
+        System.out.println("abstract methodMissing")
         steps[name](args)
     }
 

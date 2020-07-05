@@ -12,4 +12,8 @@ class AtomSample extends AbstractAtom implements Serializable{
         echo("hello world")
     }
 
+    def methodMissing(String name, def args) {
+        System.out.println("atom methodMissing")
+        steps[name](args)
+    }
 }
