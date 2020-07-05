@@ -7,7 +7,7 @@ class AbstractAtom implements Serializable {
     AbstractAtom(steps) {
         this.steps = steps
         steps.echo("init abstract atom")
-        steps.echo(steps.class)
+        this.echo = steps.echo
 
 
 
