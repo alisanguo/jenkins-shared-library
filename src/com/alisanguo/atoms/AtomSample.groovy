@@ -9,7 +9,7 @@ class AtomSample extends AbstractAtom implements Serializable{
 
     @Override
     def execute() {
-        echo("hello world")
+        steps.echo("hello world")
     }
 
 }
