@@ -13,7 +13,7 @@ class AbstractAtom implements Serializable {
 
     }
 
-    def static copyProperties(source, target) {
+    static def copyProperties(source, target) {
         source.properties.each { key, value ->
             if (target.hasProperty(key) && !(key in ['class', 'metaClass']))
                 target[key] = value
