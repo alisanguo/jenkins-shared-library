@@ -12,7 +12,7 @@ class AbstractAtom implements Serializable {
                 this[key] = value
             }
         }
-        this.echo = steps.echo
+
     }
 
     def execute() {
