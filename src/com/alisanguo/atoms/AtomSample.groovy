@@ -9,7 +9,7 @@ class AtomSample extends AbstractAtom implements Serializable{
 
     @Override
     def execute() {
-        sleep time: 2, unit: 'NANOSECONDS'
+        steps.sleep time: 2, unit: 'NANOSECONDS'
         String msg = "hello world"
         echo "li $msg"
     }
