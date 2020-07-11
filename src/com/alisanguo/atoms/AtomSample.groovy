@@ -9,11 +9,9 @@ class AtomSample extends AbstractAtom implements Serializable{
 
     @Override
     def execute() {
-        echo("hello world")
+        sleep time: 2, unit: 'NANOSECONDS'
+        String msg = "hello world"
+        echo "li $msg"
     }
 
-    def methodMissing(String name, def args) {
-        steps.echo("atom methodMissing ${name} ${args}")
-        steps."${name}"(args)
-    }
 }

@@ -6,18 +6,16 @@ class AbstractAtom implements Serializable {
 
     AbstractAtom(steps) {
         this.steps = steps
-        steps.echo("init abstract atom")
-
-    }
-
-    def methodMissing(String name, def args) {
-        steps.echo("abstract methodMissing")
-        steps[name](args)
     }
 
     def execute() {
 
     }
+
+    def echo(String msg) {
+        steps.echo(msg)
+    }
+
 
 
 
