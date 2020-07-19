@@ -2,7 +2,7 @@ package com.alisanguo.atoms
 
 class AbstractAtom implements Serializable {
 
-    def steps
+    cip steps
 
     AbstractAtom(steps) {
         this.steps = steps
