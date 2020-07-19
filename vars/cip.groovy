@@ -1,8 +1,7 @@
 import com.alisanguo.atoms.AtomSample
 
 def doJob(Map params = [:]) {
-    println(this.class.name)
-    println(this.getClasses().name)
+    println(this.metaClass)
     AtomSample atomSample = new AtomSample(this)
     atomSample.execute()
 }
