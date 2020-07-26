@@ -20,9 +20,9 @@ abstract class AbstractAtom extends AtomExecution implements Serializable {
         this.afterAtomExecution()
     }
 
-    def before() {
+   /* def before() {
         echo "AbstractAtom before"
-    }
+    }*/
 
     def execute() {
         echo "AbstractAtom execute"
