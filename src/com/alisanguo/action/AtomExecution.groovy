@@ -34,7 +34,7 @@ class AtomExecution {
 
 
     String queryParams() {
-        def url = 'jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8'
+        def url = 'jdbc:mysql://localhost:3306/test'
         def user = 'ali'
         def password = 'ali7350519'
         def driver = 'com.mysql.jdbc.Driver'
