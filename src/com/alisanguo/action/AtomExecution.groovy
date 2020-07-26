@@ -22,7 +22,7 @@ class AtomExecution {
             f.setAccessible(true)
             def atomInputParam = f.getAnnotation(AtomInputParam)
             if (atomInputParam) {
-                f.set(this, queryParams())
+                f.set(this, this.queryParams())
             }
         }
     }
