@@ -5,8 +5,7 @@ import groovy.sql.Sql
 
 @Grapes([
     @GrabResolver(name = 'aliyun', root = 'http://maven.aliyun.com/nexus/content/groups/public/'),
-    @Grab('mysql:mysql-connector-java:5.1.25'),
-    @GrabConfig(systemClassLoader = true)
+    @Grab('mysql:mysql-connector-java:5.1.25')
 ])
 class AtomExecution {
 
