@@ -14,4 +14,14 @@ class AtomSample extends AbstractAtom implements Serializable{
         echo "li $msg"
     }
 
+    @Override
+    def before() {
+        echo "AtomSample before"
+    }
+
+    @Override
+    def after() {
+        echo "AtomSample after"
+    }
+
 }
