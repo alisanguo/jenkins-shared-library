@@ -22,7 +22,8 @@ class AtomExecution {
             f.setAccessible(true)
             def atomInputParam = f.getAnnotation(AtomInputParam)
             if (atomInputParam) {
-                f.set(this, this.queryParams())
+                String value = queryParams()
+                f.set(this, value)
             }
         }
     }
@@ -32,8 +33,7 @@ class AtomExecution {
     }
 
 
-    private String queryParams() {
-
+    String queryParams() {
         def url = 'jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8'
         def user = 'ali'
         def password = 'ali7350519'
