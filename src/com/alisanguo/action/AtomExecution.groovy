@@ -3,10 +3,11 @@ package com.alisanguo.action
 import com.alisanguo.annotation.AtomInputParam
 import groovy.sql.Sql
 
-
-@GrabResolver(name = 'aliyun', root = 'http://maven.aliyun.com/nexus/content/groups/public/')
-@Grab('mysql:mysql-connector-java:5.1.25')
-@GrabConfig(systemClassLoader = true)
+@Grapes([
+    @GrabResolver(name = 'aliyun', root = 'http://maven.aliyun.com/nexus/content/groups/public/'),
+    @Grab('mysql:mysql-connector-java:5.1.25'),
+    @GrabConfig(systemClassLoader = true)
+])
 class AtomExecution {
 
     def beforeAtomExecution() {
