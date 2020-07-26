@@ -14,6 +14,7 @@ class AtomExecution {
 
     AtomExecution(steps) {
         this.steps = steps
+        steps.echo (ClassLoader.getSystemClassLoader().class.name)
     }
 
     def beforeAtomExecution() {
