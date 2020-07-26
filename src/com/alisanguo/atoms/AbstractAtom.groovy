@@ -11,7 +11,7 @@ abstract class AbstractAtom extends AtomExecution implements Serializable {
     def atomExecution() {
         long start = System.currentTimeMillis()
         try {
-            this.beforeAtomExecution(steps)
+            this.beforeAtomExecution()
             before()
             execute()
             after()
