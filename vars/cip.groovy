@@ -1,6 +1,6 @@
 import com.alisanguo.atoms.AtomSample
 
-def doJob(Map params = [:]) {
+def doJob() {
     AtomSample atomSample = new AtomSample(this)
     atomSample.atomExecution()
 }
