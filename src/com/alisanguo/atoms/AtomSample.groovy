@@ -1,7 +1,6 @@
 package com.alisanguo.atoms
 
 import com.alisanguo.annotation.AtomInputParam
-import com.alisanguo.atoms.AbstractAtom
 
 class AtomSample extends AbstractAtom implements Serializable{
 
@@ -16,7 +15,7 @@ class AtomSample extends AbstractAtom implements Serializable{
     def execute() {
         steps.sleep time: 2, unit: 'NANOSECONDS'
         String msg = "hello world"
-        echo1 "$name $msg"
+        echo "$name $msg"
     }
 
     @Override
