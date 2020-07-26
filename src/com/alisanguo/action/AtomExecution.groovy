@@ -10,7 +10,14 @@ import groovy.sql.Sql
 ])
 class AtomExecution {
 
+    def steps
+
+    AtomExecution(steps) {
+        this.steps = steps
+    }
+
     def beforeAtomExecution() {
+        steps.echo (ClassLoader.getSystemClassLoader().class.name)
         this.class.declaredFields.each {f ->
             f.setAccessible(true)
             def atomInputParam = f.getAnnotation(AtomInputParam)

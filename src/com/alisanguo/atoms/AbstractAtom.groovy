@@ -4,16 +4,14 @@ import com.alisanguo.action.AtomExecution
 
 abstract class AbstractAtom extends AtomExecution implements Serializable {
 
-    def steps
-
     AbstractAtom(steps) {
-        this.steps = steps
+        super(steps)
     }
 
     def atomExecution() {
         long start = System.currentTimeMillis()
         try {
-            this.beforeAtomExecution()
+            this.beforeAtomExecution(steps)
             before()
             execute()
             after()
